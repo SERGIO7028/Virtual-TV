@@ -1,0 +1,678 @@
+/*Con @import url () cojo un estilo de internet que aplicaré más adelante en la página.*/
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+/*Con esto aplico un padding y un margin de 0 pixels a todo el documento*/
+* {
+	padding:0px; margin:0px; 
+/* el simbolo "*" hace que lo que incluyas dentro de las llaves afecte a toda la página.*/
+}
+
+/*Aquí he puesto las dimensiones que tendrá el total de la web.*/
+#contenedor{
+	margin: auto; 
+	width: 100%;
+	height: 4000px;
+	background-color: grey;
+	border-color: black;
+	border-width: 5px 5px 5px 5px;
+}
+
+/*He añadido una imagen en la cabecera y le he puesto un position absolute para que esta abarque toda la cabecera, 
+un position fixed para que me siga apareciendo la cabecera aunque vaya más abajo en la página,
+y un z-index 1 para que el position fixed me funcione correctamente ya que sin él no se ponía por encima del div "cuerpo"*/
+#cabecera{
+	margin: auto;
+	width: 100%;
+	height: 169px;
+	border-color: black; 
+	border-width: 5px 5px 5px 5px;
+	background-image: url(https://www.atlantico.net/asset/zoomcrop,1366,800,center,center//media/atlantico/images/2020/03/27/2020032700481178810.jpg);
+	position: absolute;
+	position: fixed;
+	z-index: 1
+}
+
+/*Aquí le he dado estilo al emoji del televisor. también le he puesto un z-index:1 para que se superpusiera al div "titulo" 
+le he añadido un sombreado para que quede más agradable a la vista y un background-color:transparent para que se vea la imagen
+puesta en la cabecera. También tiene un position:fixed para el mismo fin antes mencionado*/
+.img_inicio {
+	width: 130px;
+	height: auto;
+	float: left;
+	font-size: 30px;
+	text-align: center;
+	line-height: 100px;
+	position: relative;
+	background-color: transparent;
+	text-shadow: -3px -3px 3px white, 3px 3px 1px white, -3px 3px 3px white, 3px -3px 3px white;
+	z-index: 1;
+	position: fixed;
+}
+
+/*Le he aplicado la fuente que puse al principio, le he puesto un line-height para que el texto quede verticalmente centrado
+y un font-size para el tamaño de la letra. También le he dado color y le he dado un position:fixed y un background-color:transparent*/
+.titulo {
+	font-family: 'Anton', sans-serif;
+	width: 1374px;
+	height: auto;
+	position: relative;
+	float: left; 
+	text-align: center;
+	line-height: 170px;
+	font-size:40px;
+	padding-top:0px;
+	background-color: transparent;
+	color: #663399;
+	text-shadow: -3px -3px 3px white, 3px 3px 1px white, -3px 3px 3px white, 3px -3px 3px white;
+	position: fixed;
+	
+}
+/*Ancho y alto (lo he tenido que poner en píxeles para que quede a la par que el div del formulario) 
+con el div alineado a la izquierda y un texto centrado y con espacio interlineado para que aparezca verticalmente centrado.*/
+
+
+/**/
+.divformulario{
+	width: 416px; 
+	height: 100%;
+	background-color: transparent;
+	padding-left: 30px 
+	font-family: sans-serif;
+	line-height: 40px;
+	float: left;
+	position: absolute;
+	position: fixed;
+}
+
+/* Al no poder poner el formulario centrado en el div y con texto alineado a la izquierda, he recurrido a introducir un div 
+(que contiene el formulario alineado a la izquierda y al que le he puesto interlineado vertical) 
+dentro del otro div que compone la cabecera*/
+.formulario{
+	width: 416px;
+	background-color: transparent;
+	float:right;
+}
+
+/*Aquí está el estilo del menú desplegable. le he puesto un position:absolute para que ni el div"cabecera" ni el div"cuerpo"
+se montasen encima. también le he puesto un position:fixed y un z-index:1 para que todos los desplegables pudieran ser visibles
+sobre el div "cuerpo", sino los desplegables no se podían ver ya que salían bajo este. 
+Con el "background:linear-gradient (to bottom,...)" seleccionamos una lista de colores que se pondrán gradualmente 
+en el lugar seleccionado dando una sensación de difuminado gradual*/
+.div_menu{
+	margin-top: 169px;
+	background:linear-gradient(to bottom,#535858 15%,#748E8D 35%,#133635 50%);
+	height: 35px;
+	width: 100%;
+	position: absolute;
+	position: fixed;
+	z-index: 1;
+}
+.menu{
+	float: left;
+}
+
+
+/*A partir de aquí iniciamos el estilo que va a llevar la barra del menú que contiene unos desplegables ocultos, a base de listas 
+(que contienen enlaces) con html y estilos css, y que al poner el cursor encima de aquellos que sean desplegables nos mostrará 
+el contenido que podemos seleccionar*/
+
+/*con esto le quito el estilo a todos los ol y ul*/
+ul, ol{
+	list-style: none;
+}
+
+/*con esto hago que todos los enlaces dentro de un li genere uno o más cuadros de elemento en línea*/
+.menu li a{
+	
+	display: block;
+}
+
+
+.menu > ul li{
+	float: left;
+	font-size: 25px;
+	color: white;
+	display: block;
+	min-width: 140px;
+	padding-left:30px;
+	position: relative;
+	text-align: center;
+
+}
+/*he separado a la izquierda 30px listado y el texto*/
+
+.menu > ul li ul{
+	display: none;
+	position: absolute;
+	float: left;
+	min-width: 140px;
+	
+}
+
+.menu a{
+	text-decoration: none;
+	display: block;
+	padding: 1px 10px;
+	color: white;
+}
+
+/*Con esto hago que a todos los enlaces dentro del div "menu" se les ponga un efecto de sombreado al poner el cursor sobre estos
+también selecciono el color que tendrá dicho sombreado y el color de texto que adquirirá cuando pongamos el cursor encima del enlace*/
+.menu a:hover{
+	color:#63CF32;
+	background:rgba(0,0,0,0.2);
+}
+
+/*Hace casi lo mismo que el anterior afectando a los enlaces que haya dentro de un li que estén dentro del div "menu"*/
+.menu li a:hover {
+	background-color: 434343;
+}
+
+/*aquí aplico un position:absolute a todos los ul dentro de un li para que no se solapen uno encima del otro*/
+.menu li ul {
+	display: none;
+	position: absolute;
+	min-width: 140px;
+
+}
+
+.menu li:hover > ul {
+	display: block;
+	text-align: center;
+}
+
+.menu li ul li{
+	position: relative;
+	background:linear-gradient(to bottom,#535858 15%,#748E8D 35%,#133635 50%);
+	min-width: 194px;
+	text-align: center;
+	padding-left: 0px;
+}
+
+.menu li ul li ul {
+	left: 194px;
+	top:0px;
+	background:linear-gradient(to bottom,#535858 15%,#748E8D 35%,#133635 50%);
+}
+
+.cont_izq {
+	float: right;
+	background:linear-gradient(to bottom,#535858 15%,#748E8D 35%,#133635 50%);
+	width: 30%;
+	height: 35px;
+	position: relative;
+
+}
+/*aquí acaba el diseño de los desplegables*/
+
+.buscador{
+	padding-top: 6px;
+}
+
+#cuerpo{
+	width: 100%;
+	height: 3594px;
+	position: relative;
+	margin-top: 204px;
+	background-image: radial-gradient(circle at 50% 50%, #aa9d00 0, #9ea100 12.5%, #91a400 25%, #83a70e 37.5%, #75aa1d 50%, #65ac2a 62.5%, #53af36 75%, #3cb043 87.5%, #15b24f 100%);
+	float: left;
+}
+
+.video_web {
+	color:white;
+	float:left;
+	width:80%;
+	height: 80px;
+	margin-top:50px;
+	margin-left:10%;
+	margin-right:10%;
+	border-style:outset;
+	border-width:10px;
+	border-color:#889084 ;
+	text-align:center;
+	line-height: 75px;
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 3px;
+	background:#211D1D; 
+}
+
+.mi_video {
+	float:left;
+	width:60%;
+	height:15%;
+	color:black;
+	background-color:black;
+	border:groove 1px black;
+	margin-right:20px;
+	margin-left:20%;
+	margin-top:50px;
+	text-align:center;
+	padding-top:0px;
+	}
+
+#mi_video {
+	width:100%;
+	height:100%;
+	margin: auto;
+}
+
+.novedades {
+	color:white;
+	float:left;
+	width:80%;
+	height: 80px;
+	margin-top:50px;
+	margin-left:10%;
+	margin-right:10%;
+	border-style:outset;
+	border-width:10px;
+	border-color:#889084 ;
+	text-align:center;
+	line-height: 75px;
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 3px;
+	background:#211D1D; 
+}
+
+.slider-contenedor{
+	float:left;
+	width:100%;
+	height:10%;
+	color:black;
+	background-color:transparent;
+	margin-right:20px;
+	margin-top:50px;
+	padding-top:0px;
+	position: relative;
+	display: flex;
+
+}
+
+.contenido-slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.contenido-slider:nth-child(2){
+    background: transparent;
+    
+}
+
+.contenido-slider:nth-child(3){
+    background: transparent;
+}
+
+.contenido-slider > img{
+    width: 400px;
+}
+
+.contenido-slider > div{
+    width: 40%;
+}
+
+.contenido-slider h2{
+    font-weight: 300;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.contenido-slider a{
+    color: #fff;
+    background: #332863;
+    width: 100px;
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+
+    
+}
+
+@media screen and (max-width:900px){
+    .contenido-slider > img{
+        width: 250px;
+    }
+
+    .contenido-slider > div{
+        width: 40%;
+    }
+
+    .contenido-slider h2{
+        font-size: 23px;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    .contenido-slider{
+       flex-direction: column-reverse;
+    }
+
+    .contenido-slider > div{
+        width: 60%;
+    }
+
+}
+
+/*.slider {
+	float:left;
+	width:40%;
+	height:10%;
+	color:black;
+	background-color:black;
+	border:groove 1px black;
+	margin-right:20px;
+	margin-left:30%;
+	margin-top:50px;
+	text-align:center;
+	padding-top:0px;
+	position: relative;
+	overflow: hidden;
+}
+
+.carousel {
+	max-width: 800px;
+	margin: 0 auto;
+	display: flex;
+        }
+#imagen {
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	
+}
+
+.controles{
+	width: 10%;
+	height: 10%;
+	margin-top: 1000px;
+	margin-left: 50%;
+	padding-bottom: 10px;
+}
+
+.controles button {
+	width: 50px;
+	height: 30px;
+	margin-top: 20px;
+}
+
+
+slider img {
+width:100%;
+min-height:300px;
+margin:0;
+padding:0;
+border:0;
+}
+
+.slider p {
+position: absolute;
+bottom: 30px;
+left: 0;
+display: block;
+width: 400px;
+height: 24px;
+margin:0;
+padding: 5px 0;
+color: #eee;
+background: #990000;
+font-size: 22px;
+line-height:22px;
+text-align:center;
+}*/
+
+
+.recomendaciones {
+	color:white;
+	float:left;
+	width:80%;
+	height: 80px;
+	margin-top:50px;
+	margin-left:10%;
+	margin-right:10%;
+	border-style:outset;
+	border-width:10px;
+	border-color:#889084 ;
+	text-align:center;
+	line-height: 75px;
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 3px;
+	background:#211D1D; 
+}
+
+.imagen1
+{
+	float:left;
+	border:groove 3px;
+	width:20%;
+	height:500px;
+	background-color:transparent;
+	border-color:black;
+	border-radius:1pc;
+	margin-left:250px;
+	
+	margin-bottom:100px;
+	margin-top:100px;
+	
+}
+	#imagen1 {width:100%;height:100%;border-radius:0.5pc;}
+
+
+.imagen2
+{
+	float:left;
+	border:groove 3px;
+	width:20%;
+	height:500px;
+	background-color:white;
+	border-color:black;
+	border-radius:1pc;
+	margin-left:150px;
+	
+	margin-bottom:100px;
+	margin-top:100px;
+}
+	#imagen2 {width: 100%; height: 100%;border-radius:0.5pc}
+
+
+.imagen3
+{
+	float:left;
+	border:groove 3px;
+	width:20%;
+	height:500px;
+	background-color:white;
+	border-color:black;
+	border-radius:1pc;
+	margin-left:150px;
+	margin-right:10px;
+	margin-bottom:100px;
+	margin-top:100px;
+
+}
+	#imagen3 {width: 100%; height: 100%;border-radius:0.5pc}
+
+.imagen4
+{
+	float:left;
+	border:groove 3px;
+	width:20%;
+	height:500px;
+	background-color:white;
+	border-color:black;
+	border-radius:1pc;
+	margin-left:230px;
+	margin-right:10px;
+	margin-bottom:100px;
+	margin-top:40px;
+}
+	#imagen4 {width:100%;height:100%;border-radius:0.5pc}
+
+.imagen5
+{
+	float:left;
+	border:groove 3px;
+	width:20%;
+	height:500px;
+	background-color:white;
+	border-color:black;
+	border-radius:1pc;
+	margin-left:150px;
+	margin-right:10px;
+	margin-bottom:100px;
+	margin-top:40px;
+}
+	#imagen5 {width:100%; height: 100%;border-radius:0.5pc}
+
+.imagen6
+{
+float:left;
+	border:groove 3px;
+	width:20%;
+	height:500px;
+	background-color:white;
+	border-color:black;
+	border-radius:1pc;
+	margin-left:150px;
+	margin-right:10px;
+	margin-bottom:100px;
+	margin-top:40px;
+}
+	#imagen6 {width:100%;height: 100%;border-radius:0.5pc}
+
+.imagen7
+{
+		float:left;
+	border:groove 3px;
+	width:20%;
+	height:500px;
+	background-color:white;
+	border-color:black;
+	border-radius:1pc;
+	margin-left:230px;
+	margin-right:10px;
+	margin-bottom:100px;
+	margin-top:40px;
+}
+	#imagen7 {width:100%;height: 100%;border-radius:0.5pc}
+
+.imagen8
+{
+	float:left;
+	border:groove 3px;
+	width:20%;
+	height:500px;
+	background-color:white;
+	border-color:black;
+	border-radius:1pc;
+	margin-left:150px;
+	margin-right:10px;
+	margin-bottom:100px;
+	margin-top:40px;
+}
+	#imagen8 {width:100%;height: 100%;border-radius:0.5pc}
+
+.imagen9
+{
+	float:left;
+	border:groove 3px;
+	width:20%;
+	height:500px;
+	background-color:white;
+	border-color:black;
+	border-radius:1pc;
+	margin-left:150px;
+	margin-right:10px;
+	margin-bottom:100px;
+	margin-top:40px;
+}
+	#imagen9 {width:100%;height: 100%;border-radius:0.5pc}
+
+.imagen10
+{
+	float:left;
+	border:groove 3px;
+	width:20%;
+	height:500px;
+	background-color:white;
+	border-color:black;
+	border-radius:1pc;
+	margin-left:230px;
+	margin-right:10px;
+	margin-bottom:100px;
+	margin-top:40px;
+}
+	#imagen10 {width:100%;height: 100%;border-radius:0.5pc}
+
+.imagen11
+{
+	float:left;
+	border:groove 3px;
+	width:20%;
+	height:500px;
+	background-color:white;
+	border-color:black;
+	border-radius:1pc;
+	margin-left:150px;
+	margin-right:10px;
+	margin-bottom:100px;
+	margin-top:40px;
+}
+	#imagen11 {width:100%;height: 100%;border-radius:0.5pc}
+
+.imagen12
+{
+	float:left;
+	border:groove 3px;
+	width:20%;
+	height:500px;
+	background-color:white;
+	border-color:black;
+	border-radius:1pc;
+	margin-left:150px;
+	margin-right:10px;
+	margin-bottom:100px;
+	margin-top:40px;
+}
+	#imagen12 {width:100%;height: 100%;border-radius:0.5pc}
+
+.pie {
+	float: left;
+	width: 100%;
+	height: 202px;
+	border-top: 1px, solid, black;
+	background-image: linear-gradient(to bottom, #15b24f 100%,#3cb043 87.5%,#53af36 75%, #65ac2a 62.5%, #75aa1d 50%, #83a70e 37.5%, #91a400 25%,#9ea100 12.5%,#aa9d00 0);
+	z-index: 5;
+}
+
+.social{
+	height: 10px;
+	width: 100px
+	float: left;
+	padding-left: 50%;
+}
+
+.social h1 {
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 3px;
+}
+
+.social img{
+	margin-left: 15px;
+	height: 40px;
+	width: 40px;
+	
+}
+
+.autor {
+	padding-bottom: 3px;
+}

@@ -1,0 +1,295 @@
+<!-- 
+
+La web debe verse con una resolución de pantalla de 1920x1080.
+
+la web debe llevar: 
+html: tablas: imágenes, vídeos, enlaces, tablas, listas, formularios,colores, formatos de letra y tamaños,  
+CSS: 
+XML:
+DTD: 
+XPATH: 
+XSM: 
+JavaScript
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="csspelis.css">
+	<title>PELIS</title>
+
+ 		
+
+</head>
+
+<!--La página principal de mi web la he estructurado de la siguiente manera:
+	En primer lugar, he hecho un div "contenedor" que he dividido en cuatro partes:
+	1º un div "cabecera".
+	2º un div "div_menu" que es un menú desplegable con enlaces.
+	3º un div "cuerpo", compuesto por múltiples divs con enlaces mediante imágenes.
+	4º un div "pie" que contendrá enlaces a redes sociales. -->
+
+<body>
+<div id="contenedor">
+	<!--Este div cabecera alberga otros tres divs-->
+	<div id="cabecera">
+
+		<!--este es un enlace a la página principal con el aspecto del emoji del televisor-->
+		<div class="img_inicio">
+			<a href=""><H1>&#x1F4FA;</H1></a>
+		</div>
+		<!--Aquí simplemente va un texto en h1 que contiene el nombre de la web-->
+		<div class="titulo">
+			<h1>VIRTUAL TV</h1>
+		</div>
+		<!--Un formulario para loguearse y, en caso de no estar registrado, cuenta con un button que nos lleva a la página para registrarse-->
+		<div class="formulario">
+			<div class="divformulario">
+				<p>Inicar Sesión</p>
+				<form class="usuarioycontr" algin="justify">
+					<p>Usuario <input type="text" name="Usuario" size="18" placeholder="Usuario" required=""></p>
+					<p>Contraseña <input type="password" name="Contraseña" placeholder="Contraseña" required=""></p>
+					<input type="submit" value="Entrar">
+					<a href="contacto.html"><input type="button" value="Registrarse" name="Registrarse" onclick="contacto.html"></a>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--Este div se compone de un div con un menú desplegable y otro div con un formulario de búsqueda-->
+	<div class="div_menu">
+	
+	<!--Aquí hay un menú desplegable con múltiples enlaces algunos de los cuales se añadirán más adelante-->
+	<nav class="menu">
+		<ul>
+			<li><a href="">Programación Semanal</a></li>
+			<li><a href="">Deportes</a>
+				<ul>
+					<li><a href="">Fútbol</a>
+						<ul>
+							<li><a href="">Champions</a></li>
+							<li><a href="">Liga Española</a></li>
+							<li><a href="">Copa América</a></li>
+						</ul>
+					</li>
+					<li><a href="">Baloncesto</a>
+						<ul>
+							<li><a href="">Americano</a></li>
+							<li><a href="">Europeo</a></li>
+							<li><a href="">Español</a></li>
+						</ul>
+					</li>
+					<li><a href="">Tenis</a></li>
+					<li><a href="">Riesgo</a></li>
+					<li><a href="">Agua</a></li>
+					<li><a href="">Motor</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="">Documentales</a>
+				<ul>
+					<li><a href="">Ciencia</a></li>
+					<li><a href="">Historia</a></li>
+					<li><a href="">Animales</a></li>
+				</ul><!--Cierre tipos de documentales-->
+			</li>
+
+			<li><a href="">Series</a>
+				<ul>
+					<li><a href="">Acción</a></li>
+					<li><a href="">Comedia</a></li>
+					<li><a href="">Policiaca</a></li>
+				</ul>
+			</li>
+
+			<li><a href="">Películas</a>
+				<ul>
+					<li><a href="">Acción</a></li>
+					<li><a href="">Comedia</a>
+						<ul>
+							<li><a href="">Españolas</a></li>
+							<li><a href="">Americanas</a></li>
+						</ul>
+					</li>
+					<li><a href="">Animación</a>
+						<ul>
+							<li><a href="">Infantil</a></li>
+							<li><a href="">Adolescente</a></li>
+							<li><a href="">Adulta</a></li>
+						</ul>	
+					</li><!--cierre lista animación-->						
+				</ul><!--cierre tipos de películas-->
+			</li><!--cierre lista de películas-->
+		</ul>
+	</nav>
+	
+	<!--En este div tenemos un formulario de búsqueda para buscar en google-->
+			<div class="cont_izq">
+				<form class="buscador" method="get" action="https://www.google.com/search">
+  			<input type="search" name="q" placeholder="Buscar en Google">
+  			<button type="submit">&#128270;</button>
+				</form><!--cierre formulario de búsqueda-->				
+			</div><!--cierre de cont_izq-->
+
+	</div><!--cierre del div "div_menu"-->
+
+
+	<div id="cuerpo">
+
+		<div class="video_web">
+			<h1>Vídeo de la Web</h1>
+		</div>
+
+		<!--En este div incluiré el vídeo en el que comento mi página web-->
+		<div class="mi_video">
+ 			<iframe id="mi_video" src="https://www.youtube.com/embed/akDxHN7SHLg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ 		</div>
+
+		<div class="novedades">
+			<h1>Novedades</h1>	
+		</div>
+
+		<!--Este div se compone de un slider de 3 imágenes que irán pasando de una a otra-->
+		<div class="slider-contenedor">
+		<section class="contenido-slider">
+                <div>
+                    <h2><b>EL SEÑOR DE LOS ANILLOS</b></h2>
+                    <p>En la Tierra Media, el Señor Oscuro Sauron ordenó a los Elfos que forjaran los Grandes Anillos de Poder. Tres para los reyes Elfos, siete para los Señores Enanos, y nueve para los Hombres Mortales. Pero Saurón también forjó, en secreto, el Anillo Único, que tiene el poder de esclavizar toda la Tierra Media. Con la ayuda de sus amigos y de valientes aliados, el joven hobbit Frodo emprende un peligroso viaje con la misión de destruir el Anillo Único. Pero el malvado Sauron ordena la persecución del grupo, compuesto por Frodo y sus leales amigos hobbits, un mago, un hombre, un elfo y un enano. La misión es casi suicida pero necesaria, pues si Sauron con su ejército de orcos lograra recuperar el Anillo, sería el final de la Tierra Media.</p>
+                    <a href="#">VER</a>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2wXAIhvXgKKz8-JP3oQr7fOemLx0JkFeJVw&usqp=CAU
+" alt="">
+            </section>
+            <section class="contenido-slider">
+            <div>
+                <h2><b>TENIS: MUTUA MADRID OPEN</b></h2>
+                <p>Así fue el Mutua Madrid Open 2019, un torneo inolvidable. En la última edición, Novak Djokovic y Kiki Bertens se proclamaron campeones, David Ferrer se retiró oficialmente, Roger Federer regresó a la tierra batida</p>
+                <a href="#">VER</a>
+            </div>
+            <img src="https://static3.abc.es/media/deportes/2021/05/09/berrettini-efe-kqLI--620x349@abc.jpg" alt="">
+
+       		 </section>
+
+            <section class="contenido-slider">
+                <div>
+                    <h2><b>DOCUMENTAL: LOS AZTECAS</b></h2>
+                    <P>Considerado como uno de los imperios más importantes de América, los aztecas constituyen una fuente cultural que perdura en el tiempo, dejando un legado de importancia y orgullo en la historia latinoamericana.</P>
+                    <a href="#">VER</a>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAc3pxz-C1J9KQKw7ZfQRb-Upx1knjBNYRdw&usqp=CAU
+" alt="">
+            </section>
+        
+        <section class="contenido-slider">
+            <div>
+                <h2><b>EL SEÑOR DE LOS ANILLOS</b></h2>
+                <p>En la Tierra Media, el Señor Oscuro Sauron ordenó a los Elfos que forjaran los Grandes Anillos de Poder. Tres para los reyes Elfos, siete para los Señores Enanos, y nueve para los Hombres Mortales. Pero Saurón también forjó, en secreto, el Anillo Único, que tiene el poder de esclavizar toda la Tierra Media. Con la ayuda de sus amigos y de valientes aliados, el joven hobbit Frodo emprende un peligroso viaje con la misión de destruir el Anillo Único. Pero el malvado Sauron ordena la persecución del grupo, compuesto por Frodo y sus leales amigos hobbits, un mago, un hombre, un elfo y un enano. La misión es casi suicida pero necesaria, pues si Sauron con su ejército de orcos lograra recuperar el Anillo, sería el final de la Tierra Media.</p>
+                <a>VER</a>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2wXAIhvXgKKz8-JP3oQr7fOemLx0JkFeJVw&usqp=CAU
+" alt="">
+
+        </section>
+		</div>
+
+<script type="text/javascript">
+let slider = document.querySelector(".slider-contenedor")
+let sliderIndividual = document.querySelectorAll(".contenido-slider")
+let contador = 1;
+let width = sliderIndividual[0].clientWidth;
+let intervalo = 3000;
+
+window.addEventListener("resize", function(){
+    width = sliderIndividual[0].clientWidth;
+})
+
+setInterval(function(){
+    slides();
+},intervalo);
+
+
+
+function slides(){
+    slider.style.transform = "translate("+(-width*contador)+"px)";
+    slider.style.transition = "transform .8s";
+    contador++;
+
+    if(contador == sliderIndividual.length){
+        setTimeout(function(){
+            slider.style.transform = "translate(0px)";
+            slider.style.transition = "transform 0s";
+            contador=1;
+        },1500)
+    }
+}
+
+		</script>
+
+
+
+		<!--Este es un div meramente informativo para indicar que, a partir de aquí empiezan las recomendaciones-->
+ 		<div class="recomendaciones"><H1>Recomendaciones</H1></div>
+
+ 		<!--A partir de aquí hay varios divs que contienen enlaces con la apariencia de imágenes. Sólo los divs "imagen1", "imagen2" e "imagen3" contienen enlaces reales, el resto de enlaces se añadirán más adelante-->
+ 		<div class="imagen1">
+ 			<a href="">
+ 				<img id="imagen1" src="https://www.neocine.es/recurso/articulo/1__copiar_.jpg">
+ 			</a>
+ 			<p><h3>El Señor de los Anillos: La comunidad del anillo</h3></p>	
+ 		</div>
+
+ 		
+ 		<div class="imagen2"><a href=""><img id="imagen2" src="https://cdn2.mediotiempo.com/uploads/media/2019/09/08/rafael-nadal-afp-3.jpg"></a>
+ 			<p><h3>Tenis: Mutua Madrid Open</h3></p>
+ 		</div>
+ 		
+ 		<div class="imagen3"><a href=""><img id="imagen3" src="http://www.canonistas.com/galerias/data/500/1846.JPG"></a>
+ 			<p><h3>Documental: Los aztecas</h3></p>
+ 		</div>
+ 		
+ 		<!--Como ya se indicó, a partir de este div "imagen4" al div "imagen12", no tienen enlaces reales ya que serán añadidos más adelante-->
+ 		<div class="imagen4"><a href="#"><img id="imagen4" src="https://s3.cine3.com/2020/06/LosSoprano.jpg"></a>
+ 			<p><h3>Los Soprano</h3></p>
+ 		</div>
+ 		
+ 		<div class="imagen5"><a><a href="#"><img id="imagen5" src="https://pbs.twimg.com/profile_images/1166015034390130688/mBvlnZ5b_400x400.jpg"></a>
+ 			<p><h3>El Intermedio</h3></p>
+ 		</div>
+ 		
+ 		<div class="imagen6"><a href="#"><img id="imagen6" src="https://r3.abcimg.es/resizer/resizer.php?imagen=https%3A%2F%2Fstatic3.abc.es%2Fmedia%2Fpeliculas%2F000%2F004%2F509%2Fshrek-1.jpg&nuevoancho=690&medio=abc"></a>
+ 			<p><h3>Shrek</h3></p>
+ 		</div>
+ 		
+ 		<div class="imagen7"><a href="#"><img id="imagen7" src="https://r1.abcimg.es/resizer/resizer.php?imagen=https%3A%2F%2Fstatic1.abc.es%2Fmedia%2Fcapitulos%2F000%2F009%2F088%2Ferase-un-sustituto-1.jpg&nuevoancho=690&medio=abc"></a>
+ 			<p><h3>Aquí No Hay Quien Viva; Temporada 1</h3></p>
+ 		</div>
+ 		
+ 		<div class="imagen8"><a href="#"><img id="imagen8" src="http://2.bp.blogspot.com/-EhAtgyr8F14/W5oSLEfxWkI/AAAAAAAAHYU/eUIzdQfH0VUcZHOBTevoxy5_-M3zMm0DwCK4BGAYYCw/s1600/Deathly_Hallows_1_poster.jpg"></a>
+ 			<p><h3>Harry Potter y las reliquias de la muerte: parte 1</h3></p>
+ 		</div>
+ 		
+ 		<div class="imagen9"><a href="#"><img id="imagen9" src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2017/03/06/14887646415709.jpg"></a>
+ 			<p><h3>Documental: reptiles y anfibios</h3></p>
+ 		</div>
+		
+ 		
+ 	</div><!--fin del div "cuerpo"-->
+
+ 	<!--Este div contiene el pie de la página principal compuesto por enlaces a redes sociales-->
+ 	<div class="pie">
+ 		
+ 		<div class="social">
+		<h1>SÍGUENOS EN:</h1>
+		<a href="https://es-es.facebook.com/"><img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="facebook"></a>&nbsp;
+		
+		<a href="https://twitter.com/?lang=es"><img src="https://cdn.icon-icons.com/icons2/1183/PNG/512/1490133460-social-icons01_82210.png" alt="twitter"></a>&nbsp;
+		
+		<a href="https://www.instagram.com/"><img src="https://i.pinimg.com/originals/3b/21/c7/3b21c7efd2ba9c119fb8d361acacc31d.png" alt="instagram"></a>&nbsp;
+	</div>
+	<div class="autor">web de Sergio Escribano Peña 1º de ASIR</div>
+ 	</div>
+
+</div>
+</body>
+</html>
